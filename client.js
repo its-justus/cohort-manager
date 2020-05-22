@@ -34,7 +34,7 @@ function refreshTable(){
             let tCell = $(`<td>${cohort[key]}</td>`);
             tRow.append(tCell);
         }
-        tRow.append($('<button>Delete</button>'));
+        tRow.append($('<td><button>Delete</button></td>'));
         tBody.append(tRow);
     }
 }
@@ -45,7 +45,11 @@ function setup() {
     $('#buttonClearTable').on('click', function(){
         $('table tbody').empty();
     });
-    
+
+    $('tbody button').on('click', function(event){
+        const buttonEl = event.target;
+        $(buttonEl).closest('tr').remove(); 
+    });
 }
 
 $('document').ready(setup)
