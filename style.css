@@ -1,3 +1,35 @@
 body {
     background-color: #b0b0b0;
 }
+
+table {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+th {
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+td {
+    border-bottom: 1px dotted black;
+}
+
+tr:last-child td {
+    border-bottom: 0px;
+}
